@@ -1,0 +1,74 @@
+.cards {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    .card {
+        height: 170px;
+        margin: 1rem;    
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+
+        &__inner {
+            width: 200px;
+            border-radius: 5px;
+            padding: 1rem 1.5rem;
+            background: white;
+            display: flex;
+            flex-wrap: wrap;
+
+            h1 {
+                flex: 1 1 100%;
+                font-size: 1rem;
+                font-weight: weight(bold);
+                margin-top: .5rem;
+                letter-spacing: 1px;
+                color: $nt--dk-blue;
+            }
+
+            p {
+                flex: 1 1 100%;
+                margin-top: .5rem;
+                font-weight: weight(light);
+                font-size: .7rem;
+            }
+
+            .img-wrap {
+                display: flex;
+                height: 80px;
+                width: 100%;
+                justify-content: flex-end;
+                align-items: flex-end;
+
+                img {
+                    height: 50px;
+                }
+            }
+        }
+
+        .supervisor {
+            border-top: 3px solid $primary-cyan;
+        }
+
+        .team {
+            border-top: 3px solid $primary-red;
+        }
+
+        .karma {
+            border-top: 3px solid $primary-orange;
+        }
+
+        .calculator {
+            border-top: 3px solid $primary-blue;
+        }
+    }
+}
+
+@include media-md {
+    .cards {
+        margin: -2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;          
+    }
+}

@@ -1,0 +1,46 @@
+$primary-red: hsl(0, 78%, 62%);
+$primary-cyan: hsl(180, 62%, 55%);
+$primary-orange: hsl(34, 97%, 64%);
+$primary-blue: hsl(212, 86%, 64%);
+
+$nt--dk-blue: hsl(234, 12%, 34%);
+$nt--gr-blue: hsl(229, 6%, 66%);
+$nt--lt-grey: hsl(0, 0%, 98%);
+
+$font-weight:(
+    "light": 200,
+    "medium": 400,
+    "bold": 600,
+);
+
+@function weight($weightname){
+    @return map-get($font-weight, $weightname );
+};
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin media-sm {
+    @media screen and (min-width: 768px) {
+        @content; 
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 850px) {
+        @content; 
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content; 
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content; 
+    }
+}
